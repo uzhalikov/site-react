@@ -1,0 +1,14 @@
+.question__container{
+    border-bottom: 1px solid #ababab;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 89vh;
+    overflow: auto;
+}
+.question__label{
+    color: #d4a259;
+}
+.question__container::-webkit-scrollbar {
+	width: 0;
+}

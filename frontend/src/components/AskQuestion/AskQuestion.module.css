@@ -1,0 +1,80 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.field, .button{
+    padding: 8px;
+    border-radius: 5px;
+}
+.field{
+    width: 100%;
+    z-index: 100;
+    padding-left: 2%;
+}
+.field:focus, .field:hover{
+    border-color: #d4a259;
+}
+.button{
+    background: #eee;
+    width: 200px;
+    pointer-events: none;
+}
+.active__button{
+    background: #d4a259;
+    color: #fff;
+    pointer-events: all;
+}
+fieldset{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    align-items: end;
+    position: relative;
+}
+legend{
+    position: absolute;    
+    background: #fff;
+    top: 25%;
+    left: 2%;
+    font-size: 16px;
+    color: #aaa;
+    word-spacing: 2px;
+    letter-spacing: 1.5px;
+    animation-duration: 0.5s;
+}
+.message{
+    color: green;
+}
+.hide__legend{
+    animation-name: hide__legend;
+}
+.show__legend{
+    animation-name: show__legend;
+    font-size: 12px;
+    color: #d4a259;
+    top: -24%;
+}
+@keyframes show__legend {
+    from{
+        top: 25%;
+    }
+    to{
+        top: -23%;
+    }
+}
+@keyframes hide__legend {
+    0%{
+        top: -23%;
+    }
+    100%{
+        top: 25%;
+    }
+}
+@media (max-width: 768px) {
+    fieldset{
+        width: 100%;
+    }
+}
